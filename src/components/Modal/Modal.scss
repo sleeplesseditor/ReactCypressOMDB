@@ -63,7 +63,7 @@
                 display: flex;
                 width: 100%;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: flex-end;
             }
         }
 
@@ -83,9 +83,10 @@
     }
 }
 
-@media (min-width: 600px) {
-    .grid-modal {
+@media only screen and (max-width: 1100px) {
+    .movie-modal {
         width: 700px;
-        left: calc(50% - 350px);
+        left: 10%;
+        width: 80%;
     }
 }

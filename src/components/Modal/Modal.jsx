@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalContent from './ModalContent';
 import './Modal.scss';
 
 const Backdrop = (props) => (
@@ -12,10 +13,7 @@ const modal = ({ data, modalClosed, show }) => {
             <Backdrop show={show} clicked={modalClosed} />
             {data && show ? (
                 <div className='movie-modal'>
-                    <div className="movie-modal-title">
-                        {data.Title} ({data.Year})
-                    </div>
-                    
+                    <ModalContent data={data} />
                     <hr />
                     <div className="movie-modal-btn-container">
                         <button className="movie-modal-btn" onClick={modalClosed}>Close</button>
