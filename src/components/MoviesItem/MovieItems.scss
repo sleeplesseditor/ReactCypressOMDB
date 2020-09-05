@@ -1,0 +1,42 @@
+.backdrop {
+    overflow: hidden;
+    background-color: #f6f6f6;
+    margin: 10px;
+    padding: 10px 0;
+}
+
+.movie {
+    &-item {
+        max-width: 50%;
+        flex-basis: 25%;
+        overflow: hidden;
+        text-align: center;
+        font-size: 0.9rem;
+        cursor: pointer;
+
+        &:hover {
+            .backdrop {
+                background-color: #ccc;
+            }
+        }
+    }
+
+    &-poster {
+        width: 150px;
+        height: 225px;
+        display: block;
+        margin: 0 auto 8px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .movie-item {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .movie-item {
+        max-width: 100%;
+    }
+}
