@@ -45,7 +45,7 @@ const MoviesList = () => {
     }, [])
 
     return (
-        <div className="movie-list" data-cy="movie-list">
+        <div className={showModal ? "movie-list-open" : "movie-list"} data-cy="movie-list">
             <MovieItems items={movies} selectedMovie={handleItemClick} />
             <Modal 
                 data={selectedMovie}
