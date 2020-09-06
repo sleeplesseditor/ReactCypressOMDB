@@ -9,9 +9,9 @@ const Backdrop = (props) => (
 const modal = ({ data, modalClosed, show }) => {
     return (
         <>
-            <Backdrop show={show} clicked={modalClosed} />
+            <Backdrop show={show} clicked={modalClosed} data-cy="modal-backdrop" />
             {data && show ? (
-                <div className='modal-body'>
+                <div className='modal-body' data-cy="modal-active">
                     <ModalContent data={data} />
                     <div className="modal-footer">
                         <hr />

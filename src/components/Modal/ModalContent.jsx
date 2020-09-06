@@ -5,7 +5,7 @@ const ModalContent = ({ data }) => {
     return (
         <>
             <div className="movie-modal-title">
-                <h3>{data.Title} ({data.Year})</h3>
+                <h3 data-cy="modal-title">{data.Title} ({data.Year})</h3>
             </div>
             <hr />
             <div className="movie-modal-image">
